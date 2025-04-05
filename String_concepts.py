@@ -33,26 +33,26 @@ st
 'This is my python class'
 st.lower()
 'this is my python class'
->>> st
+st
 'This is my python class'
->>> st.upper()
+st.upper()
 'THIS IS MY PYTHON CLASS'
->>> st.title()
+st.title()
 'This Is My Python Class'
->>> st.swapcase()
+st.swapcase()
 'tHIS IS MY PYTHON CLASS'
->>> st.capitalize()
+st.capitalize()
 'This is my python class'
->>> st.islower()
+st.islower()
 False
->>> st.isupper()
+st.isupper()
 False
->>> st.istitle()
+st.istitle()
 False
->>> st.isalpha()
+st.isalpha()
 False
->>> t = "apple"
->>> t.isalpha()
+t = "apple"
+t.isalpha()
 True
 s = "12345"
 s.isdigit()
@@ -98,22 +98,74 @@ s.partition("my")
 ('  This is ', 'my', ' book     ')
 st.split()
 ['This', 'is', 'my', 'python', 'class']
-s = "this,is,my,book"
-s.split(",")
+>>> s = "this,is,my,book"
+>>> s.split(",")
 ['this', 'is', 'my', 'book']
-s.replace(","," ")
+>>> s.replace(","," ")
 'this is my book'
-s.replace(","," ",3)
+>>> s.replace(","," ",3)
 'this is my book'
-s.replace(","," ",1)
+>>> s.replace(","," ",1)
 'this is,my,book'
-st = st.split()
-type(st)
+>>> st = st.split()
+>>> type(st)
 <class 'list'>
-st
+>>> st
 ['This', 'is', 'my', 'python', 'class']
-" ".join(st)
+>>> " ".join(st)
 'This is my python class'
-st = " ".join(st)
+>>> st = " ".join(st)
+>>> st
+'This is my python class'
+>>> st = "hello world"
+st[len(st)-1]
+'d'
+st[2:8]
+'llo wo'
+st[0:len(st):2]
+'hlowrd'
+st[-8]
+'l'
+st[len(li)-1,0,-1]
+Traceback (most recent call last):
+  File "<pyshell#65>", line 1, in <module>
+    st[len(li)-1,0,-1]
+NameError: name 'li' is not defined
+st[len(st)-1,0,-1]
+Traceback (most recent call last):
+  File "<pyshell#66>", line 1, in <module>
+    st[len(st)-1,0,-1]
+TypeError: string indices must be integers, not 'tuple'
+st[len(st)-1:0:-1]
+'dlrow olle'
+st[len(st)-1:-1:-1]
+''
+st[len(st)-1:-12:-1]
+'dlrow olleh'
+st[::-1]
+'dlrow olleh'
+st = "This is a book"
+st = st.split()
 st
-'This is my python class'
+['This', 'is', 'a', 'book']
+for i in st:
+    print(i)
+
+This
+is
+a
+book
+for i in range(len(st)):
+    print(st[i])
+
+This
+is
+a
+book
+for i in st:
+    if len(i)%2 == 0:
+        print(i)
+
+This
+is
+book

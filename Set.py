@@ -79,3 +79,52 @@ st.union(s)
 {1, 2, 3, 4, 5, 6, 7, 8, 9}
 st
 {1, 2, 3, 4, 5, 6}
+dic = {"name":"Ram","roll-no":7,"marks":89}
+dic
+{'name': 'Ram', 'roll-no': 7, 'marks': 89}
+dic["div"] = 1
+dic
+{'name': 'Ram', 'roll-no': 7, 'marks': 89, 'div': 1}
+dic["name"]
+'Ram'
+dic.keys()
+dict_keys(['name', 'roll-no', 'marks', 'div'])
+dic.values()
+dict_values(['Ram', 7, 89, 1])
+dic.items()
+dict_items([('name', 'Ram'), ('roll-no', 7), ('marks', 89), ('div', 1)])
+dic.get("name")
+'Ram'
+dic.popitem()
+('div', 1)
+dic
+{'name': 'Ram', 'roll-no': 7, 'marks': 89}
+dic.remove("roll-no")
+Traceback (most recent call last):
+  File "<pyshell#53>", line 1, in <module>
+    dic.remove("roll-no")
+AttributeError: 'dict' object has no attribute 'remove'
+dic.pop('roll-no')
+7
+dic
+{'name': 'Ram', 'marks': 89}
+di = {"roll-no":96,'div':2}
+dic.update(di)
+dic
+{'name': 'Ram', 'marks': 89, 'roll-no': 96, 'div': 2}
+di = dic.copy()
+di
+{'name': 'Ram', 'marks': 89, 'roll-no': 96, 'div': 2}
+di["name"] = "amit"
+di
+{'name': 'amit', 'marks': 89, 'roll-no': 96, 'div': 2}
+dic
+{'name': 'Ram', 'marks': 89, 'roll-no': 96, 'div': 2}
+dic["seq"] = [1,2,3,45,6,8,9]
+dic
+{'name': 'Ram', 'marks': 89, 'roll-no': 96, 'div': 2, 'seq': [1, 2, 3, 45, 6, 8, 9]}
+dic["seq"][0]
+1
+li = [{"name":"jay"}]
+li[0]["name"]
+'jay'
